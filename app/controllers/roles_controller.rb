@@ -1,6 +1,7 @@
 class RolesController < ApplicationController
   def index
     @roles = Role.all
+    render("roles/index.html.erb")
   end
 
   def show
@@ -34,7 +35,7 @@ class RolesController < ApplicationController
 
     @role.save
 
-    render("show")
+    render("roles/show.html.erb")
   end
 
   def destroy
